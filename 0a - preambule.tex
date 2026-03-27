@@ -1,0 +1,60 @@
+\usepackage{amsmath, amssymb}
+\usepackage{cancel}
+\usepackage{siunitx}
+\usepackage[T1]{fontenc}
+\usepackage{bm}
+\usepackage{tikz}
+\usetikzlibrary{calc, angles, quotes}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{parskip}
+\usepackage[french]{babel}
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+\usepackage{tcolorbox}
+\usepackage{pgfplots}
+
+% Pour avoir sum() dans les graphes TikZ
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\date{\center \footnotesize Version du \today}
+
+\usepackage{titling}
+\setlength{\droptitle}{-2em}      % remonte tout le bloc titre
+
+\usepackage{titlesec}
+
+\titleformat{\paragraph} % On veut que paragraph se comporte comme un titre avec un saut de ligne
+  {\normalfont\normalsize\bfseries}
+  {\theparagraph}
+  {1em}
+  {}
+  
+\usepackage{titlesec}
+
+\tcbuselibrary{theorems,skins,breakable}
+
+\newtcbtheorem[no counter] %auto counter, number within = section]
+{definition}{Définition}{
+  breakable,
+  fonttitle = \bfseries,
+  colframe = yellow!25!gray,
+  colback = yellow!2,
+  boxrule=0.8pt
+}{def}
+
+\usepackage[
+  a4paper,
+  inner=2cm,
+  outer=1.5cm,
+  top=2cm,
+  bottom=2cm
+]{geometry}
+
+% Pour l'espacement entre les énumérations qui sont par défaut tassées
+\usepackage[inline]{enumitem}
+\setlist[enumerate, 1]{topsep=0.75em, itemsep=0.75em}
+\setlist[enumerate, 2]{topsep=0.25em, itemsep=0.25em}
+
+% Symbole mathématique des multiensembles {{2, 3, 3, 5, 6}}
+\newcommand{\mset}[1]{\{\!\!\{#1\}\!\!\}}
