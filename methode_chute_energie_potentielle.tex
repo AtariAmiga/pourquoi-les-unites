@@ -4,42 +4,42 @@ Lorsque l'homme se laisse tomber, il n'a encore aucune vitesse verticale. Son é
     E_p = m\cdot g \cdot h  \\
     E_p = m\cdot g \cdot 30\,\mathrm{m}
 \end{gather*}
-On cherche donc sa vitesse $v$ telle que:
+On cherche donc sa vitesse $v_{max}$ telle que:
 \begin{gather*}
     E_c = E_p \\
-    \iff \frac{1}{2}\bcancel{m}\cdot v^2 = \bcancel{m}\cdot g \cdot 30\,\mathrm{m} \\
-    \iff v^2=60 \cdot g\cdot \mathrm{m} \\
-    \iff v=\sqrt{60\cdot g\cdot \mathrm{m}}
+    \iff \frac{1}{2}\bcancel{m}\cdot v_{max}^2 = \bcancel{m}\cdot g \cdot 30\,\mathrm{m} \\
+    \iff v_{max}^2=60 \cdot g\cdot \mathrm{m} \\
+    \iff v_{max}=\sqrt{60\cdot g\cdot \mathrm{m}}
 \end{gather*}
 On constate que la masse $m$ n'a aucun effet sur la vitesse de la chute. Cela est expliqué par l'hypothèse simplificatrice de l'absence de frottement de l'air.
 
 \paragraph{Parenthèse: avec $g \approx 9{,}81\un{N \cdot kg^{-1}}$: on ne s'en sort que difficilement}
 La définition de $g$ donnée en cours de 3\ieme{} est apparemment uniquement sous cette forme:
 \begin{gather*}
-    g \approx 9{,}81\un{N \cdot kg^{-1}}
+    g \approx \SI{9.81}{\newton\per\kg}
 \end{gather*}
 Ce qui donne ceci, qui n'est pas très utilisable pour trouver une vitesse:
 \begin{gather*}
-    v=\sqrt{60 \times9{,}81 \,\mathrm{N \cdot kg^{-1}}\,\mathrm{m}} \\
-    \iff v=\sqrt{60 \times9{,}81}\cdot\sqrt{\mathrm{N \cdot kg^{-1}}\,\mathrm{m}} \\
-    \iff v=24,26 \cdot\sqrt{\mathrm{N \cdot kg^{-1}}\,\mathrm{m}} \\
+    v_{max}=\sqrt{60 \times9{,}81 \,\mathrm{N \cdot kg^{-1}}\,\mathrm{m}} \\
+    \iff v_{max}=\sqrt{60 \times9{,}81}\cdot\sqrt{\mathrm{N \cdot kg^{-1}}\,\mathrm{m}} \\
+    \iff v_{max}=24,26 \cdot\sqrt{\mathrm{N \cdot kg^{-1}}\,\mathrm{m}} \\
 \end{gather*}
 Mais nous sommes censés trouver une vitesse, or comme nous utilisons uniquement le système international d'unités, la vitesse sera toujours en mètres par seconde (pas en kilomètres heure). Vérifions si c'est bien le cas:
 \begin{gather*}
     \frac{\mathrm{m}}{\mathrm{s}}=\sqrt{\mathrm{N \cdot kg^{-1}}\cdot\mathrm{m}} \\
     \iff \frac{\mathrm{m^2}}{\mathrm{s^2}}=\mathrm{N \cdot kg^{-1}}\cdot\mathrm{m} \\
-    \iff \mathrm{m}\cdot\mathrm{s^{-2}}=\mathrm{N \cdot kg^{-1}}\ \\
-    \iff \mathrm{kg} \cdot\mathrm{m}\cdot\mathrm{s^{-2}}=\mathrm{N}
+    \iff \SI{}{\meter\per\second\squared} = \SI{}{\newton\per\kg}\\
+    \iff \SI{}{\kg\meter\per\second\squared}=\SI{}{\newton}
 \end{gather*}
 Ce qui est bien la définition du Newton. C'est tout de même très difficile à suivre pour un élève de troisième.
 
 \paragraph{Suite de la parenthèse: il faut utiliser l'autre définition $g \approx 9{,}81 \,\mathrm{m \cdot s^{-2}}$ bien connue}
 
-On peut se demander à ce stade pourquoi ce n'est pas cette définition qui est enseignée en 3\ieme{} où l'on a une approche plus cinématique de la physique. Ou bien pourquoi ne pas donner les deux versions.
+On peut se demander à ce stade pourquoi les deux définitions (équivalentes) de $g$ ne sont pas enseignées en 3\ieme{}.
 
 En effet, on remarque que $\mathrm{m \cdot s^{-2}}$ est l'unité d'une accélération, c'est-à-dire la vitesse d'augmentation d'une vitesse, ce qui est exactement ce qu'on cherche!
 
-Montrons l'équivalence entre les deux versions de $g$. On sait qu'un Newton, c'est la force qui permet d'augmenter la vitesse d'une masse d'un kilogramme, toutes les secondes d'un mètre par seconde:
+Montrons l'équivalence entre les deux versions de $g$. On sait qu'un Newton, c'est la force qui permet d'augmenter la vitesse d'une masse d'un kilogramme, toutes les secondes, d'un mètre par seconde:
 \begin{gather*}
     1\,\mathrm{N}= 1\cdot \mathrm{kg \cdot m\cdot s^{-2}}
 \end{gather*}
@@ -52,11 +52,11 @@ On peut donc écrire:
 \end{gather*}
 
 \paragraph{Fin de l'exercice avec la définition de $g$ la plus adaptée}
-Continuons de chercher $v$:
+Continuons de chercher $v_{max}$:
 \begin{gather*}
-        v=\sqrt{60\,g\cdot \mathrm{m}} \\
-        v\approx\sqrt{60 \times 9{,}81 \,\mathrm{m \cdot s^{-2}} \cdot \mathrm{m}} \\       
-        v\approx\sqrt{588{,}6\ \mathrm{m^{2} \cdot s^{-2}}} \\
-        v\approx\sqrt{588{,}6}\ \mathrm{m^{1} \cdot s^{-1}} \\
-        \boxed {v \approx 24{,}26\ \mathrm{m \cdot s^{-1}}}
+        v_{max}=\sqrt{60\,g\cdot \mathrm{m}} \\
+        v_{max}\approx\sqrt{60 \times 9{,}81 \,\mathrm{m \cdot s^{-2}} \cdot \mathrm{m}} \\       
+        v_{max}\approx\sqrt{588{,}6\ \mathrm{m^{2} \cdot s^{-2}}} \\
+        v_{max}\approx\sqrt{588{,}6}\ \mathrm{m^{1} \cdot s^{-1}} \\
+        \boxed {v_{max} \approx 24{,}26\ \mathrm{m \cdot s^{-1}}}
 \end{gather*}
