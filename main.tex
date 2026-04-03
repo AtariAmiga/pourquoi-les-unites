@@ -1,148 +1,33 @@
 \documentclass{article}[12 pt]
 \input{0a - preambule}
-\title{Pourquoi les unités ?}
+
+\sisetup{
+  locale = FR,
+  per-mode = power,
+  exponent-product = \cdot,
+  inter-unit-product = \ensuremath{{}\cdot{}},
+}
+\newcommand{\un}[1]{\,\mathrm{#1}}
+\usepackage{xspace} % Pour pouvoir mettre des sauts à la ligne dans \title
+
+\title{Pourquoi les unités ? \\
+Difficultés avec un exercice en classe de 3\ieme{}}
 
 \begin{document}
 
 \maketitle
 
-\section{Les effets de l'absence des unités en terminale}
-Au cours d'un entretien très fructueux, Mme Bonzi me dit qu'elle a du mal à faire mettre les unités à ses élèves de terminale scientifique, option physique. Je lui explique qu'au primaire c'est interdit sous prétexte qu'en mathématiques il n'y aurait pas d'unités, mais on fait de la physique pourtant si on parle de km/h, et elle semble bien d'accord. 
+\section{Enoncé}
+\includegraphics[width=\linewidth]{le_saut_a_l_elastique.jpg}
 
-J'en discute à la maison et j'apprends d'Augustin qu'au secondaire dans les petites classes c'est interdit, jusqu'en 4\ieme{} probablement, et \textbf{cela même en cours de physique}! Il se souvient avoir demandé à M. Debussy pourquoi (car je lui ai toujours dit de les mettre) et il a fini par accepter. Pendant cette discussion, Jeanne renchérit: les unités sont interdites, alors on enlève des points à ceux qui les mettent, puis elles deviennent obligatoires, alors on enlève des points quand on les oublie.
+\section{Résolutions}
+\input{analyse_énoncé}
+\input{hypothèses}
+\input{methode_diff_calcul_energies_potentielle}
+\input{methode_chute_energie_potentielle}
+\input{methode_diff_energies_potentielles_sans_kg}
+\input{conversion_en_km_h}
 
-\section{Confirmation: exercice de physique en classe de 3\ieme{}, sans les unités}
-Voici un exercice donné à mon fils Alexis en 3\ieme{}.
-
-\textit{Soit un homme qui saute à l'élastique du haut d'un pont. Il va tomber en chute libre pendant 30 mètres, jusqu'à ce que l'élastique se mette à le ralentir.
-Quelle est la vitesse maximale atteinte ?
-}
-\paragraph{Résolution demandée, sans les unités}
-
-\paragraph{Résolution avec les unités (et quelques commentaires)}
-Hypothèse: on considère que les frottements de l'air sont négligeables.
-
-Lorsque l'homme saute, il n'a encore aucune vitesse. Donc son énergie cinétique $E_c = 0$. Son énergie potentielle $E_p$, perdue pour être convertie en énergie cinétique pendant ces 30 mètres, est:
-\begin{gather*}
-    E_p = m\cdot g \cdot h  \\
-    E_p = m\cdot g \cdot 30\,\mathrm{m}
-\end{gather*}
-On cherche sa vitesse $v$ telle que:
-\begin{gather*}
-    E_c = E_p \\
-    \iff \frac{1}{2}\bcancel{m}\cdot v^2 = \bcancel{m}\cdot g \cdot 30\,\mathrm{m} \\
-    \iff v^2=60 \cdot g\cdot \mathrm{m} \\
-    \iff v=\sqrt{60\,g\cdot \mathrm{m}}
-\end{gather*}
-On constate que la masse $m$ n'a aucun effet sur la vitesse de la chute. Cela est expliqué par l'absence de frottement. On se souvient tous en effet de l'expérience montrée au primaire d'une plume et d'une pierre qu'on laisse tomber dans le vide qui touchent le sol au même instant, alors que dans l'air, la plume descend beaucoup plus lentement que la pierre.
-
-La définition de $g$ donnée en cours de 4\ieme{} est apparemment uniquement sous cette forme:
-\begin{gather*}
-    g \approx 9{,}81 \,\mathrm{N \cdot kg^{-1}}
-\end{gather*}
-Ce qui donne ceci, qui n'est pas très utilisable pour trouver une vitesse:
-\begin{gather*}
-    v=\sqrt{60 \times9{,}81 \,\mathrm{N \cdot kg^{-1}}\,\mathrm{m}}
-\end{gather*}
-Il faut donc convertir $g$ dans des unités qui vont nous le permettre, or on sait qu'un Newton, c'est la force qui permet d'accélérer la vitesse d'une masse d'un kilogramme, toutes les secondes d'un mètre par seconde:
-\begin{gather*}
-    1\,\mathrm{N}= 1\cdot \mathrm{kg \cdot m\cdot s^{-2}}  \\
-\end{gather*}
-On peut donc convertir $g$ en des unités qui sont composées de mètres et de secondes:
-\begin{gather*}
-    g \approx 9{,}81 \,\mathrm{N \cdot kg^{-1}} \\
-    g \approx 9{,}81\cdot 1\cdot \mathrm{\bcancel{kg} \cdot m\cdot s^{-2} \bcancel{kg^{-1}}} \\
-    g \approx 9{,}81 \,\mathrm{m \cdot s^{-2}}
-\end{gather*}
-Ce qui est une autre définition bien connue de $g$. On peut se demander à ce stade pourquoi ce n'est pas cette définition qui est enseignée en 3\ieme{}.
-On remarque que $\mathrm{m \cdot s^{-2}}$ est l'unité d'une accélération, c'est-à-dire la vitesse d'augmentation d'une vitesse, ce qui est exactement ce qu'on cherche!
-
-Continuons de chercher $v$:
-\begin{gather*}
-        v=\sqrt{60\,g\cdot \mathrm{m}} \\
-        v\approx\sqrt{60 \times 9{,}81 \,\mathrm{m \cdot s^{-2}} \cdot \mathrm{m}} \\       
-        v\approx\sqrt{588{,}6\ \mathrm{m^{2} \cdot s^{-2}}} \\
-        v\approx\sqrt{588{,}6}\ \mathrm{m^{1} \cdot s^{-1}} \\
-        \boxed {v \approx 24{,}26\ \mathrm{m \cdot s^{-1}}}
-\end{gather*}
-
-Convertissons la en km/h. On sait que:
-\begin{gather*}
-        \mathrm{1\,h = 3600\,s \iff 1\,s = \frac{1}{3600}h} \\        
-        \mathrm{1\,km = 1000\,m \iff 1\,m = \frac{1}{1000}km}
-\end{gather*}
-Donc:
-{\setlength{\jot}{10pt}
-\begin{gather*}
-        {v \approx 24{,}26\ \frac{1}{1000}\mathrm{km} \cdot (\frac{1}{3600}\mathrm{h})^{-1}}\\
-        {v \approx \frac{24{,}26}{1000}\mathrm{km} \cdot \frac{3600}{\mathrm{h}}}\\
-        {v \approx \frac{24{,}26 \times 3600}{1000}\frac{\mathrm{km}}{\mathrm{h}}}\\
-        \boxed{v \approx \mathrm{87{,}34\frac{km}{h}}}
-\end{gather*}
-}
-
-\section{L'importance des unités}
-Ceux qui ne les mettent pas ne comprennent plus rien dès que le calcul est un peu compliqué. Quelques jours plus tôt, Alexis en 3\ieme{}, à qui je demande aussi depuis toujours de mettre les unités et à qui j'ai montré comment on pouvait aussi simplifier aussi les fractions avec des unités comme si c'était des nombres (par exemple $5 \frac{\mathrm{km}}{\bcancel{\mathrm{h}}} \times 2 \bcancel{\mathrm{h}}=10\ \mathrm{km}$), me dit que dans sa classe les élèves sont perdus alors que lui y arrive très bien.
-
-Par exemple, j'explique souvent ceci à mes enfants: $5\ \mathrm{m}\times5\ \mathrm{m} = 5\times5\times \mathrm{m} \times \mathrm{m} = 25 \ \mathrm{m^2}$. On sort ainsi du truc magique qui dit qu'une surface est en $\mathrm{m^2}$ ou un volume en $\mathrm{m^3}$.
-
-Ou encore je pose les questions suivantes:
-\begin{gather*}
-    \frac{5}{5}=1 \\
-    \frac{\text{un milliard six cent soixante}}{\text{un milliard six cent soixante}}=1 \\
-    \frac{\text{mètre}}{\text{mètre}}=1
-\end{gather*}
-
-Pourquoi cela est-il vrai? Intuitivement, parce que l'unité de $\frac{\mathrm{m}}{{\mathrm{m}}}$, signifie qu'il y a mètre de déplacement par mètre de déplacement. Il n'y a donc aucune transformation, ce qui correspond donc à multiplier par 1, l'élément neutre de la multiplication. Conclusion: $\frac{\mathrm{m}}{{\mathrm{m}}}=1$
-
-\section{Comment introduire la notion des unités}
-\subsection{Unités de tous les jours}
-Je ne peux pas additionner
-\begin{gather*}
-    5\ \mathrm{pommes} + 2\ \mathrm{poires}
-\end{gather*}
-car ce ne sont pas les mêmes unités.
-
-Mais, comme les pommes et les poires sont des fruits (généralisation), je peux écrire 
-\begin{gather*}
-    5\ \mathrm{fruits} + 2\ \mathrm{fruits} = 7\ \mathrm{fruits}
-\end{gather*}
-Une fois fait, j'ai perdu l'information du type de fruit.
-
-\subsection{Fractions}
-Je ne peux pas additionner directement
-\begin{gather*}
-    \frac{2}{5} + \frac{4}{3}
-\end{gather*}
-car les cinquièmes $\frac{1}{5}$ et les tiers $\frac{1}{3}$ ne sont pas de la même unité.
-
-On dit aussi que ces fractions ne sont pas sur le même dénominateur.
-
-Mais comme
-\begin{gather*}
-    \frac{2}{5} = \frac{3 \times2}{3 \times 5} = \frac{6}{15} \\
-    \frac{4}{3} = \frac{5 \times4}{5 \times 3} = \frac{20}{15}
-\end{gather*}
-Je peux maintenant additionner les deux fractions
-\begin{gather*}
-    \frac{2}{5} + \frac{4}{3} = \frac{6}{15} + \frac{20}{15} = \frac{6+20}{15}= \frac{26}{15}
-\end{gather*}
-Mais j'aurais aussi pu dire que les cinquièmes et les tiers sont des parts, et écrire ceci:
-\begin{gather*}
-    2\,\mathrm{parts} + 4\,\mathrm{parts}= 6\,\mathrm{parts}
-\end{gather*}
-Évidemment ces six parts n'ont pas toutes la même taille. Donc de cette manière je compte le nombre de parts, quelle que soit leur taille, alors qu'en mettant les fractions sur le même dénominateur, j'obtiens la quantité réelle.
-
-\subsection{Vitesse, distances, durées}
-Une voiture roule à $120\ \mathrm{km/h}$ pendant $5\ \mathrm{h}$. Quelle distance parcourt-elle?
-
-$120\ \mathrm{km/h}$ est une écriture simplifiée de $120 \frac{km}{h}$. Je comprends tout de suite que pour obtenir une distance, je dois faire disparaître l'unité de temps qui est l'heure en multipliant:
-
-\begin{gather*}
-    120 \frac{km}{h} \times 5\ \mathrm{h}
-    = 5\times120\times\frac{km\times h}{h}
-    = 600\times\frac{km\times \bcancel{h}}{\bcancel{h}} 
-    = 600 \mathrm\ {km}
-\end{gather*}
+%\input{Importance}
 
 \end{document}

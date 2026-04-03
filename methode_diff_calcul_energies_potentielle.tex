@@ -1,0 +1,71 @@
+\subsection{Méthode 1: en supposant un poids, le mien donc}
+
+On note $h_1$ la hauteur du pont par rapport au sol en contrebas de l'élastique. À $h_1=100\un{m}$, lorsque l’homme se laisse tomber, il n’a encore aucune vitesse. Son énergie cinétique est donc nulle : $E_{c_1} = 0\un{J}$ (zéro joule).
+
+Calculons son énergie mécanique (on ne lui donne pas d'index 1 car elle est constante):
+\begin{gather*}
+    E_m = E_{c_1} + E_{p_1} \\
+    E_m = 0\un{J }+ E_{p_1} \\
+    E_m = E_{p_1}
+\end{gather*}
+
+Supposons que je pèse $70\un{kg}$.
+\begin{gather*}
+    E_{p_1} = m \times g \times h_1 \\
+    E_{p_1} = 70\bcancel{\un{kg}} \times 9,81{\frac{N}{\bcancel{\un{kg}}}} \times 100\un{m} \\
+    E_{p_1} = 68670\un{N.m} \\
+\end{gather*}
+
+\paragraph{Parenthèse: tiens j'ai des $\mathrm{N.m}$ c'est quoi ça?}
+Il va falloir convertir les $\mathrm{N.m}$ en $\mathrm{J}$.
+Comment fait un élève de troisième ?
+Il faudrait qu'il connaisse la définition du Joule, qui le  travail fourni par une force de 1 N sur une distance de 1 m, afin qu'il puisse écrire:
+\begin{gather*}
+    1\un{J}=1\un{N\cdot m}
+\end{gather*}
+
+\paragraph{Suite de l'exercice}
+On sait qu'on attend des joules, si on ne s'est pas trompé dans les calculs, on peut donc écrire:
+\begin{gather*}
+    E_{m} = E_{p_1} = 68670 \un{J}
+\end{gather*}
+
+Lors de la vitesse maximale, 30 mètres plus bas, pour $h_{2} = 100\un{m} - 30\un{m} = 70\un{m}$ de hauteur par rapport au sol:
+\begin{gather*}
+    E_{p_2} = m \times g \times h_2 \\
+    \iff E_{p_2} = 70\bcancel{\un{kg}} \times \num{9,81}{\frac{\mathrm{N}}{\bcancel{\mathrm{kg}}}} \times 70\un{m} \\
+    \iff E_{p_2} = 48069\un{N.m} \\
+    \iff E_{p_2} = 48069\un{J}
+\end{gather*}
+
+Or, l'énergie mécanique est conservée, donc
+\begin{gather*}
+    E_{c_2} + E_{p_2} = E_{p_1} \\
+    \iff E_{c_2} = E_{p_1} - E_{p_2} \\
+    \iff E_{c_2} = 68670\un{J} - 48069\un{J} = 20601\un{J}
+\end{gather*}
+Or $E_{c_2} = \frac{1}{2} \times m \times v^2$, ce nous permet maintenant de chercher $v$:
+\begin{gather*}
+    \frac{1}{2} \times 70\un{kg} \times v^2 = 20601\un{J} \\
+    \iff v^2 = \frac{20601\un{J} \times 2}{70\un{kg}} \\
+    \iff v = \sqrt{\num{588,6} \frac{\mathrm{J}}{\mathrm{kg}}} \\
+    \iff v \approx \num{24,26}\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}
+\end{gather*}
+
+\paragraph{Parenthèse: $\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}$ drôle d'unité!}
+Mais quelle est cette drôle d'unité $\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}$? Même remarque que dans la parenthèse précédente, mais cette fois, cela me semble plus abordable pour un élève de 3\ieme{}, puisqu'on a déjà toutes les informations, mais tout de même difficile.
+
+On sait que l'unité de l'énergie $E_c$ est en Joules, or $Ec = \frac{1}{2}m\cdot \mathrm{v^2}$, avec la vitesse en $\mathrm{\frac{m}{s}}$. On a donc l'équivalence suivante (on enlève les nombres, on ne garde que les unités): 
+\begin{gather*}
+    \mathrm{J} = \mathrm{kg \cdot \left(\frac{\mathrm{m}} {\mathrm{s}} \right)^2} \\
+    \iff \frac{\mathrm{J}}{\mathrm{kg}} = \left(\frac{\mathrm{m}} {\mathrm{s}} \right)^2 \\
+    \iff \sqrt{\frac{\mathrm{J}}{\mathrm{kg}}} = \frac{\mathrm{m}} {\mathrm{s}}
+\end{gather*}
+
+Ouf, on tombe bien sur une vitesse.
+
+\paragraph{Fin de l'exercice}
+La vitesse en système international est toujours en $\mathrm{m\cdot s^{-1}}$, donc si on ne s'est pas trompé dans les calculs, on peut conclure que la vitesse max pour un homme de 70 kg est de:
+\begin{gather*}
+    \boxed{v \approx \num{24,26}\un{\frac{m}{s}}}
+\end{gather*}

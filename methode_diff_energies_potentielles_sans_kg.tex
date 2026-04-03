@@ -1,0 +1,47 @@
+\subsection{Méthode 3: par la différence entres énergies potentielle}
+Lorsque l'homme se laisse tomber, il est à 100 mètres de haut, il n'a encore aucune vitesse verticale. Son énergie cinétique est donc nulle: $E_{c_1} = 0$. 
+Pour trouver sa vitesse au bout de 30 mètres de chute, on va chercher son énergie cinétique $E_{c_2}$.
+
+On va calculer son énergie potentielle $E_{p_1}$ à $100\un{m}$, puis $E_{p_2}$ $30\un{m}$ plus bas, mais pour que ce soit plus intéressant, on va retarder le plus tard possible les calculs numériques, en simplifiant tout le plus possible comme on a appris en mathématiques.
+
+On sait que:
+\begin{gather*}
+        E_p = m\cdot g \cdot h
+\end{gather*}
+
+Donc:
+\begin{gather*}
+    E_{p_1} = m\cdot g \cdot 100\,\mathrm{m} \\
+    E_{p_2} = m\cdot g \cdot (100 - 30)\,\mathrm{m} \\
+\end{gather*}
+
+On sait aussi que:
+\begin{gather*}
+    E_{c_1} = 0 \\
+    E_{c_2} = \frac{1}{2}m\cdot v^2 \\
+\end{gather*}
+où $E_{c_2}$ contient la vitesse que l'on cherche.
+
+La loi de conservation de l'énergie mécanique $E_m = E_c + E_p$ nous dit que:
+\begin{gather*}
+    E_m = E_{c_1} + E_{p_1} = E_{c_2} + E_{p_2} \\
+    \iff 0 + E_{p_1} = E_{c_2} + E_{p_2} \\
+    \iff E_{c_2} = E_{p_1} - E_{p_2}
+\end{gather*}
+C'est-à-dire que l'énergie potentielle perdue est convertie en énergie cinétique.
+
+Cherchons maintenant la vitesse, cette fois en utilisant la définition de $g$ la plus adaptée, c'est à dire $g \approx \num{9,81} \,\mathrm{m \cdot s^{-2}}$:
+\begin{gather*}
+    \frac{1}{2}m\cdot v^2 = m\cdot g \cdot 100\,\mathrm{m} - m\cdot g \cdot (100 - 30)\,\mathrm{m} \\
+    \iff \frac{1}{2}\bcancel{m}\cdot v^2 = \bcancel{m}\cdot g \cdot 30
+\end{gather*}
+On constate à ce stade deux choses: la vitesse ne dépend pas du poids de la personne. De plus, elle ne dépend ni de la hauteur de départ ni de la hauteur d'arrivée, mais uniquement de la hauteur de la chute, c'est-à-dire $30\un{m}$.
+
+Continuons:
+\begin{gather*}
+    v^2=60\,g\cdot \mathrm{m} \\
+    \iff v=\sqrt{60\,g\cdot \mathrm{m}} \\
+    \iff v=\sqrt{60\cdot\num{9,81} \,\mathrm{m \cdot s^{-2}}\cdot \mathrm{m}} \\
+    \iff v=\sqrt{\num{558,6} \,\mathrm{m^2 \cdot s^{-2}}} \\
+    \iff \boxed{v=\num{24,26} \un{m \cdot s^{-1}}}
+\end{gather*}
