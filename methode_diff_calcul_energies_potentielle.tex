@@ -1,4 +1,8 @@
 \subsection{Méthode 1: en supposant un poids, le mien donc}
+C'est la solution proposée à Saint-Dominique par le professeur de physuqye.
+Je vais tenter de l'appliquer en gardant les unités jusqu'au bout, et on va voir que c'est trop complexe pour un élève de troisième.
+
+\subsubsection{Première étape: on va tenter de garder les unités jusqu'au bout}
 
 On note $h_1$ la hauteur du pont par rapport au sol en contrebas de l'élastique. À $h_1=100\un{m}$, lorsque l’homme se laisse tomber, il n’a encore aucune vitesse. Son énergie cinétique est donc nulle : $E_{c_1} = 0\un{J}$ (zéro joule).
 
@@ -13,59 +17,65 @@ Supposons que je pèse $70\un{kg}$.
 \begin{gather*}
     E_{p_1} = m \times g \times h_1 \\
     E_{p_1} = 70\bcancel{\un{kg}} \times 9,81{\frac{N}{\bcancel{\un{kg}}}} \times 100\un{m} \\
-    E_{p_1} = 68670\un{N.m} \\
+    E_{p_1} = \SI{68670}{\newton\meter} \\
 \end{gather*}
 
-\paragraph{Parenthèse: tiens j'ai des $\mathrm{N.m}$ c'est quoi ça?}
-Il va falloir convertir les $\mathrm{N.m}$ en $\mathrm{J}$.
-Comment fait un élève de troisième ?
-Il faudrait qu'il connaisse la définition du Joule, qui le  travail fourni par une force de 1 N sur une distance de 1 m, afin qu'il puisse écrire:
-\begin{gather*}
-    1\un{J}=1\un{N\cdot m}
-\end{gather*}
+\paragraph{Obstacle: tiens des $\mathrm{N.m}$ c'est quoi ça?}
+On s'attend à des joules. On peut soit y passer directement sans se poser de questions, soit montrer l'équivalence entre $\mathrm{N.m}$ et $\mathrm{J}$.
 
-\paragraph{Suite de l'exercice}
-On sait qu'on attend des joules, si on ne s'est pas trompé dans les calculs, on peut donc écrire:
+On peut trouver la solution depuis l'énoncé de l'exercice où les unités de la formule de l'énergie potentielle est donnée, ce qui donne:
 \begin{gather*}
-    E_{m} = E_{p_1} = 68670 \un{J}
+    E_p = m \cdot g \cdot h \\
+    \SI{}{\joule} = \SI{}{\kg} \cdot \SI{}{\newton\per\kg} \cdot \SI{}{\meter} \\
+    \boxed{\SI{}{\joule} = \SI{}{\newton\meter}}
+\end{gather*}
+Mais pourquoi cette équivalence? On pourrait expliquer que comme le Newton est une force, si on la multiplie par une distance en mètre, on obtient \textit{une force exercée sur une distance}, ce qui correspond à une énergie, or l'énergie dans le système international d'unités c'est le Joule.
+\paragraph{Suite de l'exercice après ce premier obstacle}
+On a donc:
+\begin{gather*}
+    E_{m} = E_{p_1} = \SI{68670}{\joule}
 \end{gather*}
 
 Lors de la vitesse maximale, 30 mètres plus bas, pour $h_{2} = 100\un{m} - 30\un{m} = 70\un{m}$ de hauteur par rapport au sol:
 \begin{gather*}
     E_{p_2} = m \times g \times h_2 \\
-    \iff E_{p_2} = 70\bcancel{\un{kg}} \times \num{9,81}{\frac{\mathrm{N}}{\bcancel{\mathrm{kg}}}} \times 70\un{m} \\
-    \iff E_{p_2} = 48069\un{N.m} \\
-    \iff E_{p_2} = 48069\un{J}
+    \iff E_{p_2} = 70\bcancel{\un{kg}} \times \num{9,81}{\frac{\mathrm{N}}{\bcancel{\mathrm{kg}}}} \times \SI{70}{\meter} \\
+    \iff E_{p_2} = \SI{48069}{\newton\meter} \\
+    \iff E_{p_2} = \SI{48069}{\joule}
 \end{gather*}
 
-Or, l'énergie mécanique est conservée, donc
+Or, l'énergie mécanique est conservée, donc:
 \begin{gather*}
     E_{c_2} + E_{p_2} = E_{p_1} \\
     \iff E_{c_2} = E_{p_1} - E_{p_2} \\
-    \iff E_{c_2} = 68670\un{J} - 48069\un{J} = 20601\un{J}
+    \iff E_{c_2} = \SI{68670}{\joule} - \SI{48069}{\joule} = \SI{20601}{\joule}
 \end{gather*}
-Or $E_{c_2} = \frac{1}{2} \times m \times v_{max}^2$, ce nous permet maintenant de chercher $v_{max}$:
+Or on sait aussi que $E_{c_2} = \frac{1}{2} \times m \times v^2$, ce qui nous permet maintenant de chercher $v$:
 \begin{gather*}
-    \frac{1}{2} \times 70\un{kg} \times v_{max}^2 = 20601\un{J} \\
-    \iff v_{max}^2 = \frac{20601\un{J} \times 2}{70\un{kg}} \\
-    \iff v_{max} = \sqrt{\num{588,6} \frac{\mathrm{J}}{\mathrm{kg}}} \\
-    \iff v_{max} \approx \num{24,26}\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}
+    \frac{1}{2} \times 70\un{kg} \times v^2 = \SI{20601}{\joule} \\
+    \iff v^2 = \frac{20601\un{J} \times 2}{70\un{kg}} \\
+    \iff v = \sqrt{\num{588,6} \frac{\mathrm{J}}{\mathrm{kg}}} \\
+    \iff v \approx \num{24,26}\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}
 \end{gather*}
 
-\paragraph{Parenthèse: $\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}$ drôle d'unité!}
-Mais quelle est cette drôle d'unité $\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}$? Même remarque que dans la parenthèse précédente, mais cette fois, cela me semble plus abordable pour un élève de 3\ieme{}, puisqu'on a déjà toutes les informations, mais tout de même difficile.
+\paragraph{Deuxième obstacle: $\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}$ drôle d'unité!}
+Mais quelle est cette drôle d'unité $\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}$?
 
-On sait que l'unité de l'énergie $E_c$ est en Joules, or $Ec = \frac{1}{2}m\cdot \mathrm{v^2}$, avec la vitesse en $\mathrm{\frac{m}{s}}$. On a donc l'équivalence suivante (on enlève les nombres, on ne garde que les unités): 
+On sait que l'unité de l'énergie $E_c$ est en Joules, avec la vitesse en $\mathrm{\frac{m}{s}}$. On a donc l'équivalence suivante (on enlève les nombres, on ne garde que les unités): 
 \begin{gather*}
-    \mathrm{J} = \mathrm{kg \cdot \left(\frac{\mathrm{m}} {\mathrm{s}} \right)^2} \\
+    % todo: voir si on peut utiliser SI pour faire plus propre
+    %\si[per-mode=fraction]{\joule} = \si{\kilogram\metre\squared\per\second\squared}  \\
+    %\si[per-mode=fraction]{\kilogram\metre\squared\per\second\squared} \\
+    E_c = \frac{1}{2}m\cdot \mathrm{v^2} \\
+    \implies \mathrm{J} = \mathrm{kg \cdot \left(\frac{\mathrm{m}} {\mathrm{s}} \right)^2} \\
     \iff \frac{\mathrm{J}}{\mathrm{kg}} = \left(\frac{\mathrm{m}} {\mathrm{s}} \right)^2 \\
     \iff \sqrt{\frac{\mathrm{J}}{\mathrm{kg}}} = \frac{\mathrm{m}} {\mathrm{s}}
 \end{gather*}
 
-Ouf, on tombe bien sur une vitesse en $\SI{}{\meter\per\second}$.
+On a donc bien l'équivalence avec $\SI{}{\meter\per\second}$.
 
 \paragraph{Fin de l'exercice}
-La vitesse en système international est toujours en $\mathrm{m\cdot s^{-1}}$, donc si on ne s'est pas trompé dans les calculs, on peut conclure que la vitesse max pour un homme de 70 kg est de:
+Conclusion, la vitesse max pour un homme de 70 kg est de:
 \begin{gather*}
-    \boxed{v_{max} \approx \SI{24.26}{\meter\per\second}}
+    \boxed{v \approx \SI{24.26}{\meter\per\second}}
 \end{gather*}

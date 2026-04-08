@@ -1,0 +1,142 @@
+\section{Comment introduire la notion des unités?}
+\subsection{Unités de tous les jours}
+Je ne peux pas additionner
+\begin{gather*}
+    5\un{pommes} + 2\un{poires}
+\end{gather*}
+car ce ne sont pas les mêmes unités.
+
+Mais, comme les pommes et les poires sont des fruits (généralisation), je peux écrire 
+\begin{gather*}
+    5\un{fruits} + 2\un{fruits} = 7\un{fruits}
+\end{gather*}
+Une fois fait, j'ai perdu l'information du type de fruit.
+
+\subsection{Fractions, dénominateurs et "unités"}
+Je ne peux pas additionner directement
+\begin{gather*}
+    \frac{2}{5} + \frac{4}{3}
+\end{gather*}
+car les cinquièmes $\frac{1}{5}$ et les tiers $\frac{1}{3}$ ne sont pas la même subdivision de l’unité.
+
+On dit aussi que ces fractions ne sont pas sur le même dénominateur.
+
+Mais comme
+{\setlength{\jot}{10pt}
+\begin{gather*}
+    \frac{2}{5} = \frac{3 \times2}{3 \times 5} = \frac{6}{15} \\
+    \frac{4}{3} = \frac{5 \times4}{5 \times 3} = \frac{20}{15}
+\end{gather*}
+}
+Je peux maintenant additionner les deux fractions
+\begin{gather*}
+    \frac{2}{5} + \frac{4}{3} \quad = \quad \frac{6}{15} + \frac{20}{15} \quad=\quad \frac{6+20}{15} \quad = \quad\frac{26}{15}
+\end{gather*}
+Mais j'aurais aussi pu dire que les cinquièmes et les tiers sont des parts, et écrire ceci:
+\begin{gather*}
+    2\,\mathrm{parts} + 4\,\mathrm{parts}= 6\,\mathrm{parts}
+\end{gather*}
+Évidemment ces six parts n'ont pas toutes la même taille. Donc de cette manière je compte le nombre de parts, quelle que soit leur taille, alors qu'en mettant les fractions sur le même dénominateur, j'obtiens la quantité réelle.
+
+\subsection{Multiplication des unités}
+\paragraph{Conversion}
+\begin{gather*}  
+    \SI{}{\kilo\meter} = \SI{1000}{\meter} \\
+    \SI{}{\kilo\liter} = \SI{1000}{\liter} \\
+    \SI{}{\kilo\gram} = \SI{1000}{\gram} \\
+    \SI{}{\tonne} = \SI{1000}{\kg} \\
+    \SI{}{\kilo\tonne} = \SI{1000}{\tonne} = \SI{1000000}{\kg} = \SI{1000000000}{\gram}\\
+    \num{1}\,\text{k\euro} = \num{1000}\,\text{\euro}
+\end{gather*}
+Autrement dit
+\begin{gather*}  
+    \text{k} = \num{1000}
+\end{gather*}
+
+\paragraph{Conversion d'un vitesse de m/s en km/h}
+On sait que:
+\begin{gather*}
+        \mathrm{1\,km = 1000\,m \iff 1\,m = \frac{1}{1000}km} \\
+        \mathrm{1\,h = 3600\,s \iff 1\,s = \frac{1}{3600}h}
+\end{gather*}
+Donc, si par exemple on a une vitesse de 30 m/s à convertir en km/h, on procède ainsi, guidé par les unités:
+{\setlength{\jot}{10pt}
+\begin{gather*}
+        v = \SI{30}{\meter\per\second} \\
+        \iff v = \num{30}\ \frac{1}{1000}\mathrm{km} \cdot \left(\frac{1}{3600}\mathrm{h}\right)^{-1}\\
+        \iff v = \frac{\num{30}}{1000}\mathrm{km} \cdot \frac{3600}{\mathrm{h}}\\
+        \iff v = \frac{\num{30} \times 3600}{1000}\frac{\mathrm{km}}{\mathrm{h}}\\
+        \iff v = \num{30} \times \num{3.6}\frac{\mathrm{km}}{\mathrm{h}}\\
+        \iff \boxed{v = \mathrm{\num{108}\frac{km}{h}}}
+\end{gather*}}
+
+
+\paragraph{Les boîtes d'œufs}
+Voici des boîtes qui contiennent six œufs.
+J'ai donc $6 \frac{\mathrm{oeufs}}{\mathrm{boite}}$, ce qui se dit "six œufs par boîte".
+Supposons que j'ai 5 boîtes. Cela me fait:
+\begin{gather*}
+    5\,\text{boite} \times 6 \frac{\text{œufs}}{\mathrm{boite}} \\
+    =5\times6\,\bcancel{\text{boite}}\times\frac{\text{œufs}}{\bcancel{\mathrm{boite}}} \\
+    =30\,\text{œufs}
+\end{gather*}
+
+\paragraph{Les mètres carrés}
+Par exemple, j'explique souvent ceci à mes enfants: $6\un{m}\times7\un{m} = 6\times7\times \mathrm{m} \times \mathrm{m} = 42\un{m^2}$.
+
+On peut l'expliquer dès qu'on a enseigné les puissances, ou bien cela peut devenir une introduction aux puissances.
+
+On sort ainsi du truc magique qui dit qu'une surface est en $\mathrm{m^2}$ ou un volume en $\mathrm{m^3}$, sans jamais savoir pourquoi.
+
+Cela permet aussi de comprendre pourquoi 
+\begin{gather*}
+    1\un{m} = 10 \un{dm} \\
+    1\un{m^2} = 10 \un{dm} \times 10\un{dm} = 10\times 10 \times \un{dm} \times \un{dm} = 100 \un{dm^2} \\
+    1\un{m^3} = 10 \un{dm} \times 10\un{dm} \times 10\un{dm} = 10\times 10\times 10 \times \un{dm} \times \un{dm} \times \un{dm} = 1000\un{dm^3}
+\end{gather*}
+On en profite pour rappeler ou introduire les notion de commutativité et d'associativité de la multiplication.
+\subsection{Vitesse, distances, durées: relations entre les grandeurs physiques}
+Une voiture roule à $120\un{km/h}$ pendant $5\un{h}$. Quelle distance parcourt-elle?
+
+$120\un{km/h}$ est une écriture simplifiée de $120 \frac{km}{h}$. Je comprends tout de suite que pour obtenir une distance, je dois faire disparaître l'unité de temps qui est l'heure en effectuant la multiplication suivante:
+
+\begin{gather*}
+    120 \frac{km}{h} \times 5\un{h}
+    = 5\times120\times\frac{km\times h}{h}
+    = 600\times\frac{km\times \bcancel{h}}{\bcancel{h}} 
+    = 600 \mathrm\ {km}
+\end{gather*}
+
+Autrement dit, les unités imposent une relation entre les grandeurs physiques qu'elles représentent. Enlever les unités, c'est perdre les relations, c'est ne plus rien comprendre à rien.
+
+\subsection{Les unités}
+Définissent les grandeurs physiques.
+
+Unités simples de temps, de distance, de poids, de quantité, mais aussi de surface et de volume:
+\begin{itemize}
+    \item $\text{distance} \times \text{distance} \times \text{distance}: volume$
+    \item $\text{distance} / temps: vitesse$ C'est la vitesse à laquelle la distance augmente.
+\end{itemize}
+
+
+Unités composées de plusieurs unités de grandeurs physiques différentes imposent des relations entre les grandeurs physiques.
+En voici quelques-unes qui sont assez faciles à comprendre
+
+\begin{itemize}
+\item $distance \times distance = surface$
+    \item $\text{vitesse} / temps= \text{accélération} = vitesse / (temps \times temps) = \text{vitesse} /\text{temps}^2$ C'est la vitesse à laquelle la vitesse augmente.
+    \item $\text{poids}/\text{surface}=\text{pression}$ On le montre facilement avec sa main qui appuie sur son autre main, et un crayon pointu tenu par une main qui appuie sur son autre main. Plus la surface est petite, plus la pression est importante.
+\end{itemize}
+
+
+\subsection{Simplification des unités}
+Ou encore je pose les questions suivantes:
+{\setlength{\jot}{10pt}
+\begin{gather*}
+    \text{Que vaut }\frac{5}{5} \text{?} \qquad \text{1 me répond l'enfant} \\
+    \text{Et que vaut }\frac{\text{un milliard six cent soixante}}{\text{un milliard six cent soixante}} \text{?}  \qquad \text{1 me répond l'enfant} \\
+    \text{Et que vaut }\frac{\text{mètre}}{\text{mètre}} \text{?} \qquad \text{et là il a du mal; je reprend à la première fraction, puis il répond correctement.}
+\end{gather*}
+}
+
+Pourquoi cela est-il vrai? Intuitivement, parce que l'unité de $\frac{\mathrm{m}}{{\mathrm{m}}}$, signifie qu'il y a mètre de déplacement par mètre de déplacement. Il n'y a donc aucune relation imposée, ce qui correspond donc à multiplier par 1, l'élément neutre de la multiplication. Conclusion: $\frac{\mathrm{m}}{{\mathrm{m}}}=1$
