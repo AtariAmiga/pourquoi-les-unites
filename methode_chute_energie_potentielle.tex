@@ -1,7 +1,6 @@
-\subsection{Méthode 2: conversion d'une partie de l'énergie potentielle en cinétique}
-Cette fois, nous allons tenter une méthode plus simple, qui permettra de garder les unités jusqu'au bout.
-\subsubsection{Remarques préalables}
-\paragraph{Avec $g \approx 9{,}81\un{N \cdot kg^{-1}}$: on ne va pas s'en sortir}
+\subsection{Remarques préalables pour la suite}
+Cette fois, nous allons tenter une autre méthode qui permettra de garder les unités jusqu'au bout.
+\paragraph{Avec $g$ en $\SI{}{\newton\per\kg}$ on ne va pas s'en sortir}
 La définition de $g$ donnée en cours de 3\ieme{} est apparemment uniquement sous cette forme:
 \begin{gather*}
     g \approx \SI{9.81}{\newton\per\kg}
@@ -12,13 +11,13 @@ Ce qui va donner ceci, qui n'est pas très utilisable pour trouver une vitesse:
     \iff v=\sqrt{60 \times9{,}81}\cdot\sqrt{\mathrm{N \cdot kg^{-1}}\,\mathrm{m}} \\
     \iff v=24,26 \cdot\sqrt{\mathrm{N \cdot kg^{-1}}\,\mathrm{m}} \\
 \end{gather*}
-\paragraph{Conclusion: utilisons l'autre définition $g \approx 9{,}81 \,\mathrm{m \cdot s^{-2}}$ bien connue}
+\paragraph{Nous utiliserons donc l'autre définition de $g \approx 9{,}81 \,\mathrm{m \cdot s^{-2}}$ bien connue}
 
 On peut se demander à ce stade pourquoi les deux définitions (équivalentes) de $g$ ne sont pas enseignées en 3\ieme{}.
 
 En effet, on remarque que $\mathrm{m \cdot s^{-2}}$ est l'unité d'une accélération, c'est-à-dire la vitesse d'augmentation d'une vitesse, ce qui est très proche de ce qu'on cherche qui est une vitesse!
 
-On pourrait montrer l'équivalence entre les deux versions de $g$ à des élèves de troisième très curieux. On expliquerait qu'un Newton, c'est la force qui permet d'augmenter la vitesse d'une masse d'un kilogramme, d'un mètre par seconde, chaque seconde, soit:
+On pourrait montrer l'équivalence entre les deux versions de $g$ à des élèves de troisième \textit{très curieux}. On expliquerait qu'un Newton, c'est la force qui permet d'augmenter la vitesse d'une masse d'un kilogramme, d'un mètre par seconde, chaque seconde, soit:
 \begin{gather*}
     1\,\mathrm{N}= (1\cdot \mathrm{kg \cdot m\cdot s^{-1}})\cdot \mathrm{s^{-1}} \\
     \iff 1\,\mathrm{N}= 1\cdot \mathrm{kg \cdot m\cdot s^{-2}}
@@ -27,25 +26,25 @@ On pourrait montrer l'équivalence entre les deux versions de $g$ à des élève
 On peut donc écrire:
 \begin{gather*}
     g \approx 9{,}81 \un{N \cdot kg^{-1}} \\
-    g \approx 9{,}81\cdot 1\cdot \bcancel{\mathrm{kg}} \cdot \mathrm{m} \cdot \mathrm{s^{-2}} \cdot \bcancel{\mathrm{kg^{-1}}} \\
-    \boxed{g \approx 9{,}81 \,\mathrm{m \cdot s^{-2}}}
+    \iff g \approx 9{,}81\cdot 1\cdot \bcancel{\mathrm{kg}} \cdot \mathrm{m} \cdot \mathrm{s^{-2}} \cdot \bcancel{\mathrm{kg^{-1}}} \\
+    \iff \boxed{g \approx 9{,}81 \,\mathrm{m \cdot s^{-2}}}
 \end{gather*}
-On peut aussi se contenter de donner les deux définitions aux élèves.
-\newpage
 
-\subsubsection{Résolution en gardant les unités jusqu'au bout}
+Passons maintenant à la résolution de l'exercice.
 
-Lorsque l'homme se laisse tomber, il n'a encore aucune vitesse verticale. Son énergie cinétique est donc nulle: $E_c = 0$. Par la loi de conservation de l'énergie mécanique, il va perdre une partie de son énergie potentielle qui va être convertie en énergie cinétique pendant ces 30 mètres. Cette perte est de $E_p$ pour $h=30\,\mathrm{m}$:
+\subsection{Méthode 2: résolution en gardant les unités jusqu'au bout}
 
-On cherche donc sa vitesse $v$ telle que:
+Lorsque je me laisse tomber, je n'ai encore aucune vitesse. Mon énergie cinétique est donc nulle: $E_c = 0$. Par la loi de conservation de l'énergie mécanique, je vai perdre une partie de mon énergie potentielle qui va être convertie en énergie cinétique pendant ces 30 mètres. On nommera cette perte $E_p$.
+
+On cherche donc ma vitesse $v$ telle que:
 \begin{gather*}
     E_c = E_p \\
     \iff \frac{1}{2}{\bcancel{m}}\cdot v^2 = \bcancel{m} \cdot g \cdot h \\
-    \iff v^2 = 2\times\SI{9.81}{\meter\per\second\squared} \cdot 30\,\mathrm{m} \\
+    \iff v^2 \approx 2\times\SI{9.81}{\meter\per\second\squared} \cdot 30\,\mathrm{m} \\
     \iff v\approx\sqrt{60 \times 9{,}81 \,\mathrm{m \cdot s^{-2}} \cdot \mathrm{m}} \\       
     \iff v\approx\sqrt{588{,}6\ \mathrm{m^{2} \cdot s^{-2}}} \\
     \iff v\approx\sqrt{588{,}6}\ \mathrm{m^{1} \cdot s^{-1}} \\
     \iff \boxed {v \approx 24{,}26\ \mathrm{m \cdot s^{-1}}}
 \end{gather*}
 
-On constate que la masse $m$ n'a aucun effet sur la vitesse de la chute, ce qui est expliqué par l'hypothèse simplificatrice de l'absence de frottement de l'air.
+On constate de plus que la masse $m$ n'a aucun effet sur la vitesse atteinte, ce qui est expliqué par l'hypothèse simplificatrice de l'absence de frottement de l'air.

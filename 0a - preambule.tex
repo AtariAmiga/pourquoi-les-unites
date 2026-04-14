@@ -12,6 +12,7 @@
 \MakeOuterQuote{"}
 \usepackage{tcolorbox}
 \usepackage{pgfplots}
+\usepackage[hidelinks]{hyperref}
 
 % Pour avoir sum() dans les graphes TikZ
 \usepackage{pgfplots}
@@ -58,3 +59,14 @@
 
 % Symbole mathématique des multiensembles {{2, 3, 3, 5, 6}}
 \newcommand{\mset}[1]{\{\!\!\{#1\}\!\!\}}
+
+% Pour la science physique
+\sisetup{
+  locale = FR,
+  per-mode = power,
+  exponent-product = \cdot,
+  inter-unit-product = \ensuremath{{}\cdot{}},
+}
+\newcommand{\un}[1]{\,\mathrm{#1}}
+\usepackage{xspace} % Pour pouvoir mettre des sauts à la ligne dans \title
+\usepackage{eurosym} % pour l'affichage de €

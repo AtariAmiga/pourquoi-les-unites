@@ -1,16 +1,6 @@
 \documentclass{article}[12 pt]
 \input{0a - preambule}
 
-\sisetup{
-  locale = FR,
-  per-mode = power,
-  exponent-product = \cdot,
-  inter-unit-product = \ensuremath{{}\cdot{}},
-}
-\newcommand{\un}[1]{\,\mathrm{#1}}
-\usepackage{xspace} % Pour pouvoir mettre des sauts à la ligne dans \title
-\usepackage{eurosym} % pour l'affichage de €
-
 \title{Pourquoi les unités ? \\
 \large{Difficultés avec un exercice en classe de 3\ieme{}}}
 
@@ -18,20 +8,17 @@
 
 \maketitle
 
-\section{Enoncé}
+\section{Introduction}
+Les unités sont importantes en sciences physiques, or les élèves de terminale scientifique semblent avoir du mal à les manipuler correctement. Cet exercice de 3\ieme{} pourrait nous éclairer sur les causes de cette difficulté.
+
+\section{Enoncé d'un exercice donné en 3\ieme{}}
 \includegraphics[width=\linewidth]{le_saut_a_l_elastique.jpg}
 
-\section{Résolutions}
 \input{analyse_énoncé}
-\input{hypothèses}
 \input{methode_diff_calcul_energies_potentielle}
 \input{methode_diff_sans_unités}
 \input{methode_chute_energie_potentielle}
-%\input{methode_diff_energies_potentielles_sans_kg}
 \input{conversion_en_km_h}
 \input{conclusion_résolution_exercice}
-
-\input{Importance}
-\input{introduction_aux_unités}
 
 \end{document}

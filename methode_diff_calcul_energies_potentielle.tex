@@ -1,19 +1,18 @@
 \subsection{Méthode 1: en supposant un poids, le mien donc}
-C'est la solution proposée à Saint-Dominique par le professeur de physuqye.
-Je vais tenter de l'appliquer en gardant les unités jusqu'au bout, et on va voir que c'est trop complexe pour un élève de troisième.
+C'est la solution proposée à Saint-Dominique par le professeur de physique, mais je vais tenter de l'appliquer \textit{en gardant les unités jusqu'au bout}, ce qui n'a pas été fait par le professeur, on va comprendre pourquoi. Dans un second temps, je le résoudrai en abandonnant les unités pour éviter les difficultés.
 
-\subsubsection{Première étape: on va tenter de garder les unités jusqu'au bout}
+\subsubsection{Premier essai: on va tenter de garder les unités jusqu'au bout}
 
-On note $h_1$ la hauteur du pont par rapport au sol en contrebas de l'élastique. À $h_1=100\un{m}$, lorsque l’homme se laisse tomber, il n’a encore aucune vitesse. Son énergie cinétique est donc nulle : $E_{c_1} = 0\un{J}$ (zéro joule).
+On note $h_1$ la hauteur du pont par rapport au sol en contrebas de l'élastique. À $h_1=100\un{m}$, lorsque je me laisse tomber, je n’ai encore aucune vitesse. Mon énergie cinétique est donc nulle : $E_{c_1} = 0\un{J}$ (zéro joule).
 
-Calculons son énergie mécanique (on ne lui donne pas d'index 1 car elle est constante):
+Calculons mon énergie mécanique (on la nomme simplement $E_m$ car elle est constante: $E_m = E_{m_1} = E_{m_2}$):
 \begin{gather*}
     E_m = E_{c_1} + E_{p_1} \\
     E_m = 0\un{J }+ E_{p_1} \\
     E_m = E_{p_1}
 \end{gather*}
 
-Supposons que je pèse $70\un{kg}$.
+Supposons que je pèse $70\un{kg}$:
 \begin{gather*}
     E_{p_1} = m \times g \times h_1 \\
     E_{p_1} = 70\bcancel{\un{kg}} \times 9,81{\frac{N}{\bcancel{\un{kg}}}} \times 100\un{m} \\
@@ -21,22 +20,20 @@ Supposons que je pèse $70\un{kg}$.
 \end{gather*}
 
 \paragraph{Obstacle: tiens des $\mathrm{N.m}$ c'est quoi ça?}
-On s'attend à des joules. On peut soit y passer directement sans se poser de questions, soit montrer l'équivalence entre $\mathrm{N.m}$ et $\mathrm{J}$.
-
-On peut trouver la solution depuis l'énoncé de l'exercice où les unités de la formule de l'énergie potentielle est donnée, ce qui donne:
+On s'attend à des joules. On peut soit y passer directement sans se poser de questions, soit montrer l'équivalence entre $\mathrm{N.m}$ et $\mathrm{J}$, ce qui est possible en partant de l'énoncé de l'exercice où les unités de la formule de l'énergie potentielle sont données. Cela  donne:
 \begin{gather*}
     E_p = m \cdot g \cdot h \\
     \SI{}{\joule} = \SI{}{\kg} \cdot \SI{}{\newton\per\kg} \cdot \SI{}{\meter} \\
     \boxed{\SI{}{\joule} = \SI{}{\newton\meter}}
 \end{gather*}
-Mais pourquoi cette équivalence? On pourrait expliquer que comme le Newton est une force, si on la multiplie par une distance en mètre, on obtient \textit{une force exercée sur une distance}, ce qui correspond à une énergie, or l'énergie dans le système international d'unités c'est le Joule.
+Mais \textit{pourquoi} cette équivalence? On pourrait expliquer que, comme le Newton est une force, si on la multiplie par une distance en mètres, on obtient \textit{une force exercée sur une distance} donc pendant un certain temps, ce qui correspond à une énergie, or l'énergie dans le système international d'unités est en joules.
 \paragraph{Suite de l'exercice après ce premier obstacle}
 On a donc:
 \begin{gather*}
     E_{m} = E_{p_1} = \SI{68670}{\joule}
 \end{gather*}
 
-Lors de la vitesse maximale, 30 mètres plus bas, pour $h_{2} = 100\un{m} - 30\un{m} = 70\un{m}$ de hauteur par rapport au sol:
+J'atteins la vitesse maximale 30 mètres plus bas, pour $h_{2} = 100\un{m} - 30\un{m} = 70\un{m}$ de hauteur par rapport au sol:
 \begin{gather*}
     E_{p_2} = m \times g \times h_2 \\
     \iff E_{p_2} = 70\bcancel{\un{kg}} \times \num{9,81}{\frac{\mathrm{N}}{\bcancel{\mathrm{kg}}}} \times \SI{70}{\meter} \\
@@ -58,24 +55,21 @@ Or on sait aussi que $E_{c_2} = \frac{1}{2} \times m \times v^2$, ce qui nous pe
     \iff v \approx \num{24,26}\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}
 \end{gather*}
 
-\paragraph{Deuxième obstacle: $\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}$ drôle d'unité!}
+\paragraph{Deuxième obstacle: $\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}$}
 Mais quelle est cette drôle d'unité $\sqrt{\frac{\mathrm{J}}{\mathrm{kg}}}$?
 
-On sait que l'unité de l'énergie $E_c$ est en Joules, avec la vitesse en $\mathrm{\frac{m}{s}}$. On a donc l'équivalence suivante (on enlève les nombres, on ne garde que les unités): 
+On sait que l'unité de l'énergie $E_c$ est en Joules, avec la vitesse en $\mathrm{\frac{m}{s}}$. On a donc l'équivalence suivante (on enlève les nombres, on ne garde que les unités, on passe en analyse dimensionnelle): 
 \begin{gather*}
-    % todo: voir si on peut utiliser SI pour faire plus propre
-    %\si[per-mode=fraction]{\joule} = \si{\kilogram\metre\squared\per\second\squared}  \\
-    %\si[per-mode=fraction]{\kilogram\metre\squared\per\second\squared} \\
     E_c = \frac{1}{2}m\cdot \mathrm{v^2} \\
     \implies \mathrm{J} = \mathrm{kg \cdot \left(\frac{\mathrm{m}} {\mathrm{s}} \right)^2} \\
     \iff \frac{\mathrm{J}}{\mathrm{kg}} = \left(\frac{\mathrm{m}} {\mathrm{s}} \right)^2 \\
     \iff \sqrt{\frac{\mathrm{J}}{\mathrm{kg}}} = \frac{\mathrm{m}} {\mathrm{s}}
 \end{gather*}
 
-On a donc bien l'équivalence avec $\SI{}{\meter\per\second}$.
+On a donc bien l'équivalence avec $\SI{}{\meter\per\second}$. Pas très accessible à des élèves de 3\ieme{}.
 
 \paragraph{Fin de l'exercice}
-Conclusion, la vitesse max pour un homme de 70 kg est de:
+Conclusion, on sait qu'on attend une vitesse en mètres par seconde, donc la vitesse max pour un homme de 70 kg est de (on convertira en km/h plus tard):
 \begin{gather*}
     \boxed{v \approx \SI{24.26}{\meter\per\second}}
 \end{gather*}
